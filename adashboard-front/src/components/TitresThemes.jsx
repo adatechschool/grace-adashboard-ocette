@@ -1,4 +1,5 @@
 import { ListeSkills } from "./ListeSkills";
+import { BoutonRemove } from "./BoutonRemove";
 
 export const TitresThemes = ({ value, handleDelete }) => {
   return (
@@ -8,7 +9,7 @@ export const TitresThemes = ({ value, handleDelete }) => {
           <div key={event.id}>
             <h2>{event.name}</h2>
             <ListeSkills event={event} />
-            <button onClick={() => handleDelete(event.id)}>Remove</button>
+            <BoutonRemove handleDelete={handleDelete} id={event.id} />
           </div>
         );
       })}
